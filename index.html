@@ -4,107 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Descubre París</title>
-    <!-- Estilos CSS en una sección separada -->
-    <style>
-      /* General */
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        width: 90%;
-        margin: auto;
-        max-width: 1200px;
-      }
-      /* Encabezado */
-      header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-      }
-      header h1 {
-        margin: 0;
-      }
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 10px;
-      }
-      nav a:hover {
-        text-decoration: underline;
-      }
-      /* Secciones */
-      section {
-        padding: 20px 0;
-        border-bottom: 1px solid #ddd;
-      }
-      section h2 {
-        color: #333;
-      }
-      section p {
-        color: #555;
-      }
-      /* Listas de atracciones */
-      #atracciones ul {
-        list-style-type: none;
-        padding: 0;
-      }
-      #atracciones li {
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
-      }
-      #atracciones img {
-        width: 80px;
-        height: 80px;
-        border-radius: 8px;
-        margin-right: 15px;
-      }
-      /* Formulario de contacto */
-      form {
-        display: flex;
-        flex-direction: column;
-      }
-      label {
-        margin-top: 10px;
-        font-weight: bold;
-      }
-      input,
-      textarea,
-      button {
-        padding: 10px;
-        margin-top: 5px;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-      }
-      button {
-        background-color: #333;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #555;
-      }
-      /* Footer */
-      footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #333;
-        color: #fff;
-      }
-      footer a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 5px;
-      }
-      footer a:hover {
-        text-decoration: underline;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
@@ -132,13 +32,14 @@
       <section id="atracciones">
         <h2>Atracciones Populares</h2>
         <ul>
-          <li><img src="eiffel.jpg" alt="Torre Eiffel" /> Torre Eiffel</li>
+          <li><img src="./img/torre.jpg" alt="Torre Eiffel" /> Torre Eiffel</li>
           <li>
-            <img src="louvre.jpg" alt="Museo del Louvre" /> Museo del Louvre
+            <img src="./img/louvre.jpg" alt="Museo del Louvre" /> Museo del
+            Louvre
           </li>
           <li>
-            <img src="notre_dame.jpg" alt="Catedral de Notre-Dame" /> Catedral
-            de Notre-Dame
+            <img src="./img/notredame.jpg" alt="Catedral de Notre-Dame" />
+            Catedral de Notre-Dame
           </li>
         </ul>
       </section>
@@ -151,7 +52,7 @@
           baguettes y croissants hasta platillos gourmet.
         </p>
         <img
-          src="gastronomia.jpg"
+          src="./img/comida.jpg"
           alt="Comida típica de París"
           style="width: 100%; max-width: 500px; border-radius: 8px"
         />
