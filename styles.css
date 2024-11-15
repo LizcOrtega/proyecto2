@@ -1,7 +1,7 @@
 /* General */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #000000;
   margin: 0;
   padding: 0;
 }
@@ -12,7 +12,7 @@ body {
 }
 /* Encabezado */
 header {
-  background-color: #333;
+  background-color: #29054a;
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -34,14 +34,15 @@ section {
   border-bottom: 1px solid #ddd;
 }
 section h2 {
-  color: #333;
+  color: #ffffff;
 }
 section p {
-  color: #555;
+  color: #ffffff;
 }
 /* Listas de atracciones */
 #atracciones ul {
   list-style-type: none;
+  color: #fff;
   padding: 0;
 }
 #atracciones li {
@@ -59,10 +60,12 @@ section p {
 form {
   display: flex;
   flex-direction: column;
+  margin: 0 auto; /* Centra el formulario en la página */
 }
 label {
   margin-top: 10px;
   font-weight: bold;
+  color: #c159fd;
 }
 input,
 textarea,
@@ -71,21 +74,25 @@ button {
   margin-top: 5px;
   border-radius: 5px;
   border: 1px solid #ddd;
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  max-width: 500px; /* Máximo ancho de 500px */
 }
 button {
-  background-color: #333;
+  background-color: #7e42c3;
+  width: 150px; /* Botón más pequeño que los campos de texto */
+  height: 45px; /* Aumenta la altura del botón */
   color: #fff;
   border: none;
   cursor: pointer;
 }
 button:hover {
-  background-color: #555;
+  background-color: #ffffff;
 }
 /* Footer */
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #333;
+  background-color: #3f0264;
   color: #fff;
 }
 footer a {
@@ -95,4 +102,43 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Carrusel de imágenes */
+.carousel {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel-images img {
+  width: 100%;
+  flex: 0 0 100%;
+}
+/* Botones de navegación */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-button.left {
+  left: 10px;
+}
+.carousel-button.right {
+  right: 10px;
 }

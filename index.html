@@ -23,8 +23,10 @@
       <section id="historia">
         <h2>Historia de París</h2>
         <p>
-          Con una rica historia que data de siglos, París es famosa por sus
-          monumentos, su cultura y su papel en la historia de Europa.
+          <label> ¿Viajando a París? </label> Visita los lugares más
+          emblemáticos de esta ciudad. Con una rica historia que data de siglos,
+          París es famosa por sus monumentos, su cultura y su papel en la
+          historia de Europa.
         </p>
       </section>
 
@@ -51,12 +53,51 @@
           París es también conocida por su deliciosa gastronomía, desde
           baguettes y croissants hasta platillos gourmet.
         </p>
-        <img
-          src="./img/comida.jpg"
-          alt="Comida típica de París"
-          style="width: 100%; max-width: 500px; border-radius: 8px"
-        />
+
+        <!-- Carrusel de imágenes -->
+        <div class="carousel">
+          <div class="carousel-images" id="carousel-images">
+            <img src="./img/comida.jpg" alt="Comida típica de París 1" />
+            <img src="./img/comida2.jpg" alt="Comida típica de París 2" />
+            <img src="./img/comida3.jpg" alt="Comida típica de París 3" />
+          </div>
+          <!-- Botones de navegación -->
+          <button class="carousel-button left" onclick="prevSlide()">
+            &#10094;
+          </button>
+          <button class="carousel-button right" onclick="nextSlide()">
+            &#10095;
+          </button>
+        </div>
       </section>
+
+      <!-- Scripts para el carrusel -->
+      <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+          const carousel = document.getElementById("carousel-images");
+          const totalImages = carousel.children.length;
+
+          if (index >= totalImages) {
+            currentIndex = 0;
+          } else if (index < 0) {
+            currentIndex = totalImages - 1;
+          } else {
+            currentIndex = index;
+          }
+
+          carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+          showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+          showSlide(currentIndex - 1);
+        }
+      </script>
 
       <!-- Sección de Contacto -->
       <section id="contacto">
